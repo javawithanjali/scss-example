@@ -1,13 +1,13 @@
+@import "mixin";
+@import "variable";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-
-@mixin hover-effert{
-    transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+// operator scss
+html{
+    font-size: 50%;
 }
 
 body {
@@ -22,13 +22,28 @@ body {
 .experience-container {
   display: flex;
   gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-container-headings{
+    display: flex;
+     flex-direction: column;
+     align-items: center;
+h1{
+    font-size: $tx-fn;
+    color: violet;
 }
 
+p{
+    font-size: $tx-fn;
+    color: teal;
+}
+}
 button {
   padding: 14px 28px;
   border: none;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 2rem+2rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
@@ -39,7 +54,7 @@ button {
   background: #28a745;
 
   &:hover{
-      background: #218838;
+  background: #218838;
   @include hover-effert;
   }
 }

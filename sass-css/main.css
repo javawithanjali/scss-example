@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 50%;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -16,13 +20,29 @@ body {
 .experience-container {
   display: flex;
   gap: 20px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experience-container-headings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.experience-container-headings h1 {
+  font-size: 6rem;
+  color: violet;
+}
+.experience-container-headings p {
+  font-size: 6rem;
+  color: teal;
 }
 
 button {
   padding: 14px 28px;
   border: none;
   border-radius: 12px;
-  font-size: 16px;
+  font-size: 4rem;
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s ease;
