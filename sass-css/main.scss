@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+@mixin hover-effert{
+    transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+}
+
+.experience-container {
+  display: flex;
+  gap: 20px;
+}
+
+button {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+}
+
+.good-experience-button button {
+  background: #28a745;
+
+  &:hover{
+      background: #218838;
+  @include hover-effert;
+  }
+}
+
+.bad-experience-button button {
+  background: #dc3545;
+
+  &:hover{
+    background: #c82333;
+  @include hover-effert;
+  }
+}
